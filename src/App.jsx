@@ -522,13 +522,105 @@ export default function MCodontoWebsite() {
       </section >
       
       {/* FOOTER */}
-      < footer className="bg-gray-950 text-gray-400 py-12 px-6 text-center" >
-        <h3 className="text-3xl font-bold text-white mb-4">Odontología MC</h3>
+<footer className="bg-gray-950 text-gray-300 py-14 px-6">
 
-        <p className="mb-2">Clínica odontológica moderna y profesional.</p>
+  <div className="max-w-7xl mx-auto">
 
-        <p>© 2026 Todos los derechos reservados.</p>
-      </footer >
+    <h3 className="text-3xl font-bold text-white text-center mb-8">
+      Odontología MC
+    </h3>
+
+    <div className="grid md:grid-cols-3 gap-10 text-center">
+
+      {/* Lugano */}
+      <div>
+        <h4 className="text-white font-bold mb-3">
+          📍 Lugano
+        </h4>
+
+        <p>Guaminí 4982</p>
+
+        <a
+          href="https://wa.me/5491154833390"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-cyan-400 hover:text-cyan-300"
+        >
+          📞 11 5483-3390
+        </a>
+      </div>
+
+      {/* Tapiales */}
+      <div>
+
+        <h4 className="text-white font-bold mb-3">
+          📍 Tapiales
+        </h4>
+
+        <p>Juncal 28</p>
+
+        <a
+          href="https://wa.me/5491138757361"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-cyan-400 hover:text-cyan-300"
+        >
+          📞 11 3875-7361
+        </a>
+
+      </div>
+
+      {/* Ramos */}
+      <div>
+
+        <h4 className="text-white font-bold mb-3">
+          📍 Ramos Mejía
+        </h4>
+
+        <p>Av. de Mayo 1262</p>
+
+        <a
+          href="https://wa.me/5491176668074"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-cyan-400 hover:text-cyan-300"
+        >
+          📞 11 7666-8074
+        </a>
+
+      </div>
+
+    </div>
+
+    {/* Instagram */}
+    <div className="mt-10 text-center">
+
+      <a
+        href="https://www.instagram.com/odontologiam_c"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+          inline-flex
+          items-center
+          gap-3
+          text-pink-400
+          hover:text-pink-300
+          font-semibold
+          text-lg
+        "
+      >
+        📷 @odontologiam_c
+      </a>
+
+    </div>
+
+    <div className="mt-10 text-center text-gray-500">
+      © 2026 MC Odontología · Todos los derechos reservados
+    </div>
+
+  </div>
+
+</footer>
 
 
     </div >
