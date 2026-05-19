@@ -3,7 +3,30 @@ import { Menu, X, Phone, MapPin, Clock } from 'lucide-react'
 
 export default function MCodontoWebsite() {
   const [menuOpen, setMenuOpen] = useState(false)
+   const limite = new Date("2026-05-23")
 
+  if (new Date() > limite) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+
+        <div className="bg-white p-10 rounded-3xl shadow-xl text-center">
+
+          <h1 className="text-4xl font-bold mb-4">
+            Demo expirada
+          </h1>
+
+          <p className="text-gray-600">
+            Contactanos para habilitar el sitio.
+          </p>
+
+        </div>
+
+      </div>
+    )
+  }
+
+  
+      
   const treatments = [
     {
       title: 'Implantes Dentales',
