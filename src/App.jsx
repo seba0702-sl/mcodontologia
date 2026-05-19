@@ -78,7 +78,7 @@ export default function MCodontoWebsite() {
             </a>
 
             <a href="#sucursales" className="text-gray-700 hover:text-cyan-600 transition">
-              Sucursales
+              Consultorios
             </a>
 
             <a href="#contacto" className="text-gray-700 hover:text-cyan-600 transition">
