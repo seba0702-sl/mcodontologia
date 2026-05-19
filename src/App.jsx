@@ -169,7 +169,7 @@ export default function MCodontoWebsite() {
             <a href="#nosotros">Nosotros</a>
             <a href="#tratamientos">Tratamientos</a>
             <a href="#galeria">Galería</a>
-            <a href="#sucursales">Sucursales</a>
+            <a href="#sucursales">Consultorios</a>
             <a href="#contacto">Contacto</a>
           </div>
         )}
@@ -349,7 +349,7 @@ export default function MCodontoWebsite() {
           </p>
 
           <h3 className="text-5xl font-black mb-16 text-center">
-            Nuestras Sucursales
+            Nuestros Consultorios
           </h3>
 
           <div className="grid lg:grid-cols-3 gap-8">
