@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Menu, X, Phone, MapPin, Clock } from 'lucide-react'
 
+
 export default function MCodontoWebsite() {
   const [menuOpen, setMenuOpen] = useState(false)
   
@@ -66,18 +67,7 @@ export default function MCodontoWebsite() {
     }));
   };
 
-  // CONTROL DE EXPIRACIÓN DE LA DEMO (Corregido sin hooks internos)
-  const limite = new Date("2026-05-23")
-  if (new Date() > limite) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <div className="bg-white p-10 rounded-3xl shadow-xl text-center">
-          <h1 className="text-4xl font-bold mb-4">Demo expirada</h1>
-          <p className="text-gray-600">Contactanos para habilitar el sitio.</p>
-        </div>
-      </div>
-    )
-  }
+  
 
   const treatments = [
     {
@@ -110,15 +100,45 @@ export default function MCodontoWebsite() {
       image: '/imagenes/niños.jpeg',
       description:'Odontopediatría integral: cuidado especializado, prevención y acompañamiento en el crecimiento de la sonrisa de tus hijos.'
     },
+    {
+      title: 'Limpieza dental',
+      image: '/imagenes/implantes.jpeg',
+      video: 'https://www.youtube.com/embed/Wyi1zrvX31w',
+    },
+    {
+      title: 'Restauraciones',
+      image: '/imagenes/implantes.jpeg',
+      video: 'https://www.youtube.com/embed/FlbYjFwgxnY',
+    },
+    {
+      title: 'Cirugía Oral',
+      image: '/imagenes/implantes.jpeg',
+      video: 'https://www.youtube.com/embed/SXgHiwHpVOs',
+    },
+    {
+      title: 'Protesis fijas',
+      image: '/imagenes/implantes.jpeg',
+      video: 'https://www.youtube.com/embed/r1Lo3dNIJagboard-write',
+    },
+    {
+      title: 'Protesis removibles',
+      image: '/imagenes/implantes.jpeg',
+      video: 'https://www.youtube.com/embed/2cL06JscWqY',
+    },
+    {
+      title: 'Placas miorelajantes',
+      image: '/imagenes/implantes.jpeg',
+      video: 'https://www.youtube.com/embed/aV9FPbjyHB0',
+    },
   ]
-
+  const [selected, setSelected] = useState(treatments[0])
   const gallery = [
     '/imagenes/servicios.jpeg',
     '/imagenes/chequeos.jpeg',
     '/imagenes/consultorio-nuevo.jpeg',
     '/imagenes/recomendaciones.jpeg',
     '/imagenes/consejos.jpeg',
-    'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1200&auto=format&fit=crop',
+    '/consultorios/recepcion-lug.jpeg',
   ]
 
   return (
@@ -127,7 +147,8 @@ export default function MCodontoWebsite() {
       <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-cyan-700">MC Odontología</h1>
+            <h3 className="text-2xl font-bold text-cyan-700">MC Odontología</h3>
+            <p className="text-xl font-bold text-black-600">Dr. Beker Mateo Barerra Gonzalez<br />ODONTOLOGO<br />M.P. 33543 - M.N. 39933</p>
             <p className="text-xs text-gray-500">Consultorio Odontológico</p>
           </div>
 
@@ -170,19 +191,32 @@ export default function MCodontoWebsite() {
 
       {/* HERO */}
       <section
-        className="min-h-screen flex items-center bg-center bg-cover relative"
-        style={{ backgroundImage: "url('/imagenes/hero.jpg')" }}
+        
+        className="
+min-h-screen
+flex
+items-center
+bg-center
+bg-no-repeat
+bg-[length:50%]
+md:bg-[length:30%]
+relative
+opacity-80
+"
+style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
       >
         <div className="absolute inset-0 bg-black/55"></div>
         <div className="relative max-w-7xl mx-auto px-6 text-white pt-24">
           <div className="max-w-3xl">
-            <p className="uppercase tracking-[5px] text-cyan-300 mb-4 text-sm">Odontología Moderna</p>
+            <p className="uppercase tracking-[5px] text-white font-bold mb-4 text-sm">
+  Odontología Moderna
+</p>
             <h2 className="text-5xl md:text-7xl font-black leading-tight mb-8">
               Transformamos <span className="text-cyan-400 block">Sonrisas</span>
             </h2>
-            <p className="text-lg md:text-2xl text-gray-200 mb-10 max-w-2xl">
-              Atención odontológica premium con tecnología avanzada y un equipo especializado.
-            </p>
+            <p className="text-lg md:text-2xl text-black mb-10 max-w-2xl">
+  Atención odontológica premium con tecnología avanzada y un equipo especializado.
+</p>
             <div className="flex flex-col sm:flex-row gap-5">
               <a href="#contacto" className="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl text-lg font-bold text-center">Solicitar Turno</a>
               <a href="#tratamientos" className="border border-white hover:bg-white hover:text-black transition px-8 py-4 rounded-2xl text-lg font-bold text-center">Ver Tratamientos</a>
@@ -216,7 +250,7 @@ export default function MCodontoWebsite() {
       <section id="nosotros" className="py-28 px-6 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1200&auto=format&fit=crop"
+            src='/consultorios/sala-lug.jpeg'
             alt="Consultorio"
             className="rounded-[40px] shadow-2xl h-full object-cover"
           />
@@ -231,27 +265,81 @@ export default function MCodontoWebsite() {
       </section>
 
       {/* TRATAMIENTOS */}
-      <section id="tratamientos" className="py-28 bg-gray-100 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="uppercase tracking-[4px] text-cyan-600 font-semibold mb-4">Especialidades</p>
-          <h3 className="text-5xl font-black mb-16">Nuestros Tratamientos</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {treatments.map((item, index) => (
-              <article key={index} className="bg-white rounded-[30px] overflow-hidden shadow-lg hover:-translate-y-2 transition">
-                <img src={item.image} alt={item.title} className="h-72 w-full object-cover" />
-                <div className="p-8 text-left">
-                  <h4 className="text-2xl font-bold mb-4">{item.title}</h4>
-                  {item.video && (
-                    <div className="rounded-2xl overflow-hidden mb-6">
-                      <iframe className="w-full h-52" src={item.video} title={item.title} loading="lazy" allowFullScreen />
-                    </div>
-                  )}
-                </div>
-              </article>
-            ))}
-          </div>
+<section id="tratamientos" className="py-28 bg-gray-100 px-6">
+  <div className="max-w-7xl mx-auto">
+
+    <div className="text-center mb-16">
+      <p className="uppercase tracking-[4px] text-cyan-600 font-semibold mb-4">
+        Especialidades
+      </p>
+
+      <h3 className="text-5xl font-black">
+        Nuestros Tratamientos
+      </h3>
+    </div>
+
+    <div className="grid lg:grid-cols-[320px_1fr] gap-8">
+
+      {/* LISTA */}
+      <div className="bg-white rounded-[30px] p-6 shadow-lg h-fit">
+
+        {treatments.map((item) => (
+          <button
+            key={item.title}
+            onClick={() => setSelected(item)}
+            className={`w-full text-left p-5 rounded-2xl mb-3 transition-all
+            ${
+              selected.title === item.title
+                ? "bg-cyan-600 text-white"
+                : "hover:bg-gray-100"
+            }`}
+          >
+            {item.title}
+          </button>
+        ))}
+
+      </div>
+
+      {/* DETALLE */}
+      <article className="bg-white rounded-[30px] overflow-hidden shadow-lg">
+
+        <img
+          src={selected.image}
+          alt={selected.title}
+          className="w-full h-[420px] object-cover"
+        />
+
+        <div className="p-8">
+
+          <h4 className="text-4xl font-black mb-6">
+            {selected.title}
+          </h4>
+
+          {selected.description && (
+            <p className="text-gray-600 leading-8 mb-8">
+              {selected.description}
+            </p>
+          )}
+
+          {selected.video && (
+            <div className="rounded-[25px] overflow-hidden">
+              <iframe
+                className="w-full h-[420px]"
+                src={selected.video}
+                title={selected.title}
+                loading="lazy"
+                allowFullScreen
+              />
+            </div>
+          )}
+
         </div>
-      </section>
+
+      </article>
+
+    </div>
+  </div>
+</section>
 
       {/* GALERIA */}
       <section id="galeria" className="py-28 bg-white px-6">
