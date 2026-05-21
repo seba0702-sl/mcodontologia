@@ -378,7 +378,20 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
                       {/* Botón Flecha Izquierda */}
                       <button
                         onClick={() => prevSlide(consultorio.id, consultorio.fotos.length)}
-                        className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 font-bold"
+                        className="
+absolute left-3 top-1/2 -translate-y-1/2
+bg-white/80
+text-gray-800
+p-2
+rounded-full
+shadow-md
+opacity-100
+lg:opacity-0
+lg:group-hover:opacity-100
+transition
+z-10
+font-bold
+"
                       >
                         &#10094;
                       </button>
@@ -386,7 +399,20 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
                       {/* Botón Flecha Derecha */}
                       <button
                         onClick={() => nextSlide(consultorio.id, consultorio.fotos.length)}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 font-bold"
+                        className="
+absolute left-3 top-1/2 -translate-y-1/2
+bg-white/80
+text-gray-800
+p-2
+rounded-full
+shadow-md
+opacity-100
+lg:opacity-0
+lg:group-hover:opacity-100
+transition
+z-10
+font-bold
+"
                       >
                         &#10095;
                       </button>
