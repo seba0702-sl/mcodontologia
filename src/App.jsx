@@ -4,7 +4,7 @@ import { Menu, X, Phone, MapPin, Clock } from 'lucide-react'
 
 export default function MCodontoWebsite() {
   const [menuOpen, setMenuOpen] = useState(false)
-  
+
   // Lista de datos de tus consultorios con sus respectivas fotos
   const consultorios = [
     {
@@ -67,71 +67,123 @@ export default function MCodontoWebsite() {
     }));
   };
 
-  
+
 
   const treatments = [
     {
       title: 'Implantes Dentales',
-      image: '/imagenes/implantes.jpeg',
-      video: 'https://www.youtube.com/embed/RVUfH4pWpxE',
+      images: [
+        '/tratamientos/impl-1.jpeg',
+        '/tratamientos/impl-2.jpeg'
+
+      ],
+      description: 'Recuperá función y estética dental.'
     },
-    {
-      title: 'Ortodoncia',
-      image: '/imagenes/ortodoncia.jpg',
-      video: 'https://youtube.com/embed/r2RafVHWp4Q',
-    },
+
     {
       title: 'Blanqueamiento',
-      image: '/imagenes/blanqueamiento.jpeg',
-      video: 'https://www.youtube.com/embed/YEwnJG2treI',
+      images: [
+        '/tratamientos/blanq-ayd.jpeg',
+        '/tratamientos/blanq-lamp.jpeg'
+      ],
+       description: 'Dientes más blancos y una sonrisa renovada.'
     },
+
     {
       title: 'Carillas',
-      image: '/imagenes/carillas.jpg',
-      video: 'https://www.youtube.com/embed/DplAjcWEgBs',
+      images: [
+        '/tratamientos/carillas1.jpeg',
+        '/tratamientos/carillas2.jpeg',
+        '/tratamientos/carillas3.jpeg'
+      ],
+      description: 'Carillas dentales para lograr una sonrisa estética y natural.'
     },
+
     {
       title: 'Endodoncia',
-      image: '/imagenes/endodoncia.jpg',
-      video: 'https://www.youtube.com/embed/Nh59rIGb_eE',
+      images: [
+        '/tratamientos/endo-1.jpeg',
+        '/tratamientos/endo-2.jpeg',
+        '/tratamientos/endo-3.jpeg'
+      ],
+      description: 'Eliminamos el dolor y preservamos tu diente.'
     },
     {
-      title: 'Odontopediatría',
-      image: '/imagenes/niños.jpeg',
-      description:'Odontopediatría integral: cuidado especializado, prevención y acompañamiento en el crecimiento de la sonrisa de tus hijos.'
+      title: 'Cirugía general',
+      images: [
+        '/tratamientos/ciru-1.jpeg',
+        '/tratamientos/ciru-2.jpeg'
+
+      ],
+      description: 'Tratamientos quirúrgicos con atención segura y personalizada.'
+    },
+
+    {
+      title: 'Ortodoncia',
+      images: [
+        '/tratamientos/braquets-esteticos.jpeg',
+        '/tratamientos/braquets-zirconio.jpeg',
+        '/tratamientos/braquets-autoligado-esteticos.jpeg',
+        '/tratamientos/braquets-autoligmetal.jpeg',
+        '/tratamientos/braquets-metal.jpeg'
+
+      ],
+      description: 'Corrección de la posición dental para una sonrisa armónica.'
     },
     {
       title: 'Limpieza dental',
-      image: '/imagenes/implantes.jpeg',
-      video: 'https://www.youtube.com/embed/Wyi1zrvX31w',
+      images: [
+        '/tratamientos/limp-cepillo.png',
+        '/tratamientos/limp-cepillo2.jpeg',
+        '/tratamientos/limp-cepillo3.jpeg',
+        '/tratamientos/limp-gancho.jpeg',
+        '/tratamientos/limp-gancho2.jpeg'
+
+      ],
+      description: 'Higiene dental profesional para una boca más saludable.'
     },
     {
-      title: 'Restauraciones',
-      image: '/imagenes/implantes.jpeg',
-      video: 'https://www.youtube.com/embed/FlbYjFwgxnY',
-    },
-    {
-      title: 'Cirugía Oral',
-      image: '/imagenes/implantes.jpeg',
-      video: 'https://www.youtube.com/embed/SXgHiwHpVOs',
-    },
-    {
-      title: 'Protesis fijas',
-      image: '/imagenes/implantes.jpeg',
-      video: 'https://www.youtube.com/embed/r1Lo3dNIJagboard-write',
-    },
-    {
-      title: 'Protesis removibles',
-      image: '/imagenes/implantes.jpeg',
-      video: 'https://www.youtube.com/embed/2cL06JscWqY',
+      title: 'Odontopediatria',
+      images: [
+        '/tratamientos/odontped1.jpeg',
+      ],
+      description: 'Cuidado odontológico infantil para una sonrisa sana desde pequeños.'
     },
     {
       title: 'Placas miorelajantes',
-      image: '/imagenes/implantes.jpeg',
-      video: 'https://www.youtube.com/embed/aV9FPbjyHB0',
+      images: [
+        '/tratamientos/placasmio1.jpeg',
+        '/tratamientos/placasmio2.jpeg'
+      ],
+      description: 'Placas diseñadas para disminuir tensión y desgaste dental.'
+    },
+    {
+      title: 'Prótesis fija',
+      images: [
+        '/tratamientos/pro-fija1.jpeg',
+        '/tratamientos/pro-fija2.jpeg'
+      ],
+      description: 'Rehabilitación dental con resultados naturales y funcionales.'
+    },
+    {
+      title: 'Prótesis removibles',
+      images: [
+        '/tratamientos/prote-rem1.jpeg',
+        '/tratamientos/prote-rem2.jpeg'
+      ],
+      description: 'Soluciones removibles adaptadas a tus necesidades.'
+    },
+    {
+      title: 'Restauración de caries',
+      images: [
+        '/tratamientos/rest-caries1.jpeg',
+        '/tratamientos/rest-caries2.jpeg'
+      ],
+      description: 'Recuperamos la forma, función y estética de dientes afectados por caries.'
     },
   ]
   const [selected, setSelected] = useState(treatments[0])
+  const [fotoActiva, setFotoActiva] = useState(0)
   const gallery = [
     '/imagenes/servicios.jpeg',
     '/imagenes/chequeos.jpeg',
@@ -191,7 +243,7 @@ export default function MCodontoWebsite() {
 
       {/* HERO */}
       <section
-        
+
         className="
 min-h-screen
 flex
@@ -203,25 +255,25 @@ md:bg-[length:30%]
 relative
 opacity-80
 "
-style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
+        style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
       >
         <div className="absolute inset-0 bg-black/55"></div>
         <div className="relative max-w-7xl mx-auto px-6 text-white pt-24">
           <div className="max-w-3xl">
             <p className="uppercase tracking-[5px] text-white font-bold mb-4 text-sm">
-  Odontología Moderna
-</p>
+              Odontología Moderna
+            </p>
             <h2 className="text-3xl sm:text-5xl md:text-7xl font-black leading-tight mb-6">
               Transformamos <span className="text-cyan-400 block">Sonrisas</span>
             </h2>
             <p className="text-sm sm:text-base md:text-xl text-white mb-8 max-w-xl">
-  Atención odontológica premium con tecnología avanzada y un equipo especializado.
-</p>
+              Atención odontológica premium con tecnología avanzada y un equipo especializado.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
 
-  <a
-    href="#contacto"
-    className="
+              <a
+                href="#contacto"
+                className="
       w-full sm:w-auto
       bg-cyan-500
       hover:bg-cyan-600
@@ -234,13 +286,13 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
       text-center
       break-words
     "
-  >
-    Solicitar Turno
-  </a>
+              >
+                Solicitar Turno
+              </a>
 
-  <a
-    href="#tratamientos"
-    className="
+              <a
+                href="#tratamientos"
+                className="
       w-full sm:w-auto
       border
       border-white
@@ -255,11 +307,11 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
       text-center
       break-words
     "
-  >
-    Ver Tratamientos
-  </a>
+              >
+                Ver Tratamientos
+              </a>
 
-</div>
+            </div>
           </div>
         </div>
       </section>
@@ -304,34 +356,36 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
       </section>
 
       {/* TRATAMIENTOS */}
-<section id="tratamientos" className="py-28 bg-gray-100 px-6">
-  <div className="max-w-7xl mx-auto">
+      <section id="tratamientos" className="py-28 bg-gray-100 px-6">
+        <div className="max-w-7xl mx-auto">
 
-    <div className="text-center mb-16">
-      <p className="uppercase tracking-[4px] text-cyan-600 font-semibold mb-4">
-        Especialidades
-      </p>
+          <div className="text-center mb-16">
+            <p className="uppercase tracking-[4px] text-cyan-600 font-semibold mb-4">
+              Especialidades
+            </p>
 
-      <h3 className="text-3xl md:text-5xl font-black">
-        Nuestros Tratamientos
-      </h3>
-    </div>
+            <h3 className="text-3xl md:text-5xl font-black">
+              Nuestros Tratamientos
+            </h3>
+          </div>
 
-    <div className="grid lg:grid-cols-[320px_1fr] gap-8">
+          <div className="grid lg:grid-cols-[320px_1fr] gap-8">
 
-      <div className="bg-white rounded-[30px] p-6 shadow-lg h-fit">
+            <div className="bg-white rounded-[30px] p-6 shadow-lg h-fit">
 
-  {/* CELULAR */}
-  <div className="lg:hidden">
-    <select
-      value={selected.title}
-      onChange={(e) => {
-        const elegido = treatments.find(
-          t => t.title === e.target.value
-        )
-        setSelected(elegido)
-      }}
-      className="
+              {/* CELULAR */}
+              <div className="lg:hidden">
+                <select
+                  value={selected.title}
+                  onChange={(e) => {
+                const elegido = treatments.find(
+                t => t.title === e.target.value
+              )
+
+              setSelected(elegido)
+              setFotoActiva(0)
+              }}
+                  className="
         w-full
         p-4
         rounded-2xl
@@ -340,75 +394,140 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
         text-lg
         bg-white
       "
-    >
-      {treatments.map((item) => (
-        <option key={item.title} value={item.title}>
-          {item.title}
-        </option>
-      ))}
-    </select>
-  </div>
+                >
+                  {treatments.map((item) => (
+                    <option key={item.title} value={item.title}>
+                      {item.title}
+                    </option>
+                  ))}
+                </select>
+              </div>
 
-  {/* PC */}
-  <div className="hidden lg:block">
-    {treatments.map((item) => (
-      <button
-        key={item.title}
-        onClick={() => setSelected(item)}
-        className={`w-full text-left p-5 rounded-2xl mb-3 transition
-          ${
-            selected.title === item.title
-              ? 'bg-cyan-600 text-white'
-              : 'hover:bg-gray-100'
-          }`}
-      >
-        {item.title}
-      </button>
-    ))}
-  </div>
+              {/* PC */}
+              <div className="hidden lg:block">
+                {treatments.map((item) => (
+                  <button
+                    key={item.title}
+                    onClick={() => {
+                      setSelected(item)
+                      setFotoActiva(0)
+                    }}
+                    className={`w-full text-left p-5 rounded-2xl mb-3 transition
+          ${selected.title === item.title
+                        ? 'bg-cyan-600 text-white'
+                        : 'hover:bg-gray-100'
+                      }`}
+                  >
+                    {item.title}
+                  </button>
+                ))}
+              </div>
 
-</div>
-
-      {/* DETALLE */}
-      <article className="bg-white rounded-[30px] overflow-hidden shadow-lg">
-
-        <img
-          src={selected.image}
-          alt={selected.title}
-          className="w-full h-[220px] md:h-[420px] object-cover"
-        />
-
-        <div className="p-4 md:p-5">
-
-          <h4 className="text-2xl md:text-4xl font-black">
-            {selected.title}
-          </h4>
-
-          {selected.description && (
-            <p className="text-gray-600 leading-8 mb-8">
-              {selected.description}
-            </p>
-          )}
-
-          {selected.video && (
-            <div className="rounded-[25px] overflow-hidden">
-              <iframe
-                className="w-full h-[220px] md:h-[420px]"
-                src={selected.video}
-                title={selected.title}
-                loading="lazy"
-                allowFullScreen
-              />
             </div>
-          )}
 
+            {/* DETALLE */}
+            <article
+  className="
+bg-white
+rounded-[30px]
+overflow-hidden
+shadow-lg
+max-w-[850px]
+mx-auto
+"
+>
+              <div className="relative overflow-hidden">
+
+                <img
+  src={selected.images[fotoActiva]}
+  alt={selected.title}
+  className="
+w-full
+h-[180px]
+sm:h-[220px]
+md:h-[280px]
+lg:h-[340px]
+object-contain
+bg-gray-50
+"
+/>
+
+                <button
+                  onClick={() =>
+                    setFotoActiva(
+                      fotoActiva === 0
+                        ? selected.images.length - 1
+                        : fotoActiva - 1
+                    )
+                  }
+                  className="
+absolute
+left-3
+top-1/2
+-translate-y-1/2
+bg-white
+p-3
+rounded-full
+"
+                >
+                  ‹
+                </button>
+
+                <button
+                  onClick={() =>
+                    setFotoActiva(
+                      fotoActiva === selected.images.length - 1
+                        ? 0
+                        : fotoActiva + 1
+                    )
+                  }
+                  className="
+absolute
+right-3
+top-1/2
+-translate-y-1/2
+bg-white
+p-3
+rounded-full
+"
+                >
+                  ›
+                </button>
+
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                  {selected.images.map((_, i) => (
+                    <div
+                      key={i}
+                      className={`h-2 rounded-full ${i === fotoActiva
+                        ? 'w-6 bg-cyan-600'
+                        : 'w-2 bg-white'
+                        }`}
+                    />
+                  ))}
+                </div>
+
+              </div>
+
+              <div className="p-4 md:p-5">
+
+                <h4 className="text-xl sm:text-2xl md:text-4xl font-black">
+                  {selected.title}
+                </h4>
+
+                {selected.description && (
+                  <p className="text-gray-600 leading-8 mb-8">
+                    {selected.description}
+                  </p>
+                )}
+
+
+              </div>
+
+            </article>
+
+          </div>
         </div>
-
-      </article>
-
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* GALERIA */}
       <section id="galeria" className="py-28 bg-white px-6">
@@ -455,8 +574,8 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
                       {/* Botón Flecha Derecha */}
                       <button
                         onClick={() => nextSlide(consultorio.id, consultorio.fotos.length)}
-                        
-                        
+
+
                       >
                         &#10095;
                       </button>
@@ -466,9 +585,8 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
                         {consultorio.fotos.map((_, index) => (
                           <span
                             key={index}
-                            className={`h-2 rounded-full transition-all duration-300 ${
-                              index === currentIndex ? 'w-5 bg-cyan-600' : 'w-2 bg-white/60'
-                            }`}
+                            className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex ? 'w-5 bg-cyan-600' : 'w-2 bg-white/60'
+                              }`}
                           />
                         ))}
                       </div>
