@@ -541,7 +541,7 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
           <div className="mt-10 text-center">
             <a href="https://www.instagram.com/odontologiam_c" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-pink-400 hover:text-pink-300 font-semibold text-lg">
               📷 "Instagram" @odontologiam_c
-            </a>
+            </a><br />
             <a href="https://www.tiktok.com/@odontologiam_c?_r=1&_t=ZS-96XnZWeMx4X" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-pink-400 hover:text-pink-300 font-semibold text-lg">
               📷"TikTok" @odontologiam_c
             </a>
