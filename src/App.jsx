@@ -280,25 +280,55 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
 
     <div className="grid lg:grid-cols-[320px_1fr] gap-8">
 
-      {/* LISTA */}
       <div className="bg-white rounded-[30px] p-6 shadow-lg h-fit">
 
-        {treatments.map((item) => (
-          <button
-            key={item.title}
-            onClick={() => setSelected(item)}
-            className={`w-full text-left p-5 rounded-2xl mb-3 transition-all
-            ${
-              selected.title === item.title
-                ? "bg-cyan-600 text-white"
-                : "hover:bg-gray-100"
-            }`}
-          >
-            {item.title}
-          </button>
-        ))}
+  {/* CELULAR */}
+  <div className="lg:hidden">
+    <select
+      value={selected.title}
+      onChange={(e) => {
+        const elegido = treatments.find(
+          t => t.title === e.target.value
+        )
+        setSelected(elegido)
+      }}
+      className="
+        w-full
+        p-4
+        rounded-2xl
+        border
+        border-gray-300
+        text-lg
+        bg-white
+      "
+    >
+      {treatments.map((item) => (
+        <option key={item.title} value={item.title}>
+          {item.title}
+        </option>
+      ))}
+    </select>
+  </div>
 
-      </div>
+  {/* PC */}
+  <div className="hidden lg:block">
+    {treatments.map((item) => (
+      <button
+        key={item.title}
+        onClick={() => setSelected(item)}
+        className={`w-full text-left p-5 rounded-2xl mb-3 transition
+          ${
+            selected.title === item.title
+              ? 'bg-cyan-600 text-white'
+              : 'hover:bg-gray-100'
+          }`}
+      >
+        {item.title}
+      </button>
+    ))}
+  </div>
+
+</div>
 
       {/* DETALLE */}
       <article className="bg-white rounded-[30px] overflow-hidden shadow-lg">
@@ -378,20 +408,7 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
                       {/* Botón Flecha Izquierda */}
                       <button
                         onClick={() => prevSlide(consultorio.id, consultorio.fotos.length)}
-                        className="
-absolute left-3 top-1/2 -translate-y-1/2
-bg-white/80
-text-gray-800
-p-2
-rounded-full
-shadow-md
-opacity-100
-lg:opacity-0
-lg:group-hover:opacity-100
-transition
-z-10
-font-bold
-"
+                        className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 font-bold"
                       >
                         &#10094;
                       </button>
@@ -399,20 +416,8 @@ font-bold
                       {/* Botón Flecha Derecha */}
                       <button
                         onClick={() => nextSlide(consultorio.id, consultorio.fotos.length)}
-                        className="
-absolute left-3 top-1/2 -translate-y-1/2
-bg-white/80
-text-gray-800
-p-2
-rounded-full
-shadow-md
-opacity-100
-lg:opacity-0
-lg:group-hover:opacity-100
-transition
-z-10
-font-bold
-"
+                        
+                        
                       >
                         &#10095;
                       </button>
