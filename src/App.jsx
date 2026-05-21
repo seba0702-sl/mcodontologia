@@ -211,16 +211,55 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
             <p className="uppercase tracking-[5px] text-white font-bold mb-4 text-sm">
   Odontología Moderna
 </p>
-            <h2 className="text-5xl md:text-7xl font-black leading-tight mb-8">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl font-black leading-tight mb-6">
               Transformamos <span className="text-cyan-400 block">Sonrisas</span>
             </h2>
-            <p className="text-base md:text-xl text-black mb-10 max-w-2xl">
+            <p className="text-sm sm:text-base md:text-xl text-white mb-8 max-w-xl">
   Atención odontológica premium con tecnología avanzada y un equipo especializado.
 </p>
-            <div className="flex flex-col sm:flex-row gap-5">
-              <a href="#contacto" className="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl text-lg font-bold text-center">Solicitar Turno</a>
-              <a href="#tratamientos" className="border border-white hover:bg-white hover:text-black transition px-8 py-4 rounded-2xl text-lg font-bold text-center">Ver Tratamientos</a>
-            </div>
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+
+  <a
+    href="#contacto"
+    className="
+      w-full sm:w-auto
+      bg-cyan-500
+      hover:bg-cyan-600
+      transition
+      px-5 md:px-8
+      py-3 md:py-4
+      rounded-2xl
+      text-base md:text-lg
+      font-bold
+      text-center
+      break-words
+    "
+  >
+    Solicitar Turno
+  </a>
+
+  <a
+    href="#tratamientos"
+    className="
+      w-full sm:w-auto
+      border
+      border-white
+      hover:bg-white
+      hover:text-black
+      transition
+      px-5 md:px-8
+      py-3 md:py-4
+      rounded-2xl
+      text-base md:text-lg
+      font-bold
+      text-center
+      break-words
+    "
+  >
+    Ver Tratamientos
+  </a>
+
+</div>
           </div>
         </div>
       </section>
@@ -402,7 +441,7 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
                       <img
                         src={consultorio.fotos[currentIndex]}
                         alt={`Foto de ${consultorio.localidad}`}
-                        className="w-full h-full object-cover transition-all duration-500 ease-in-out"
+                        className="w-full h-full object-cover ition-all duration-500 ease-in-out"
                       />
 
                       {/* Botón Flecha Izquierda */}
