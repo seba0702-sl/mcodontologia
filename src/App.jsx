@@ -214,7 +214,7 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
             <h2 className="text-5xl md:text-7xl font-black leading-tight mb-8">
               Transformamos <span className="text-cyan-400 block">Sonrisas</span>
             </h2>
-            <p className="text-lg md:text-2xl text-black mb-10 max-w-2xl">
+            <p className="text-base md:text-xl text-black mb-10 max-w-2xl">
   Atención odontológica premium con tecnología avanzada y un equipo especializado.
 </p>
             <div className="flex flex-col sm:flex-row gap-5">
@@ -226,7 +226,7 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
       </section>
 
       {/* INFO */}
-      <section className="py-14 bg-cyan-600 text-white">
+      <section className="py-16 md:py-28 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-6 text-center">
           <div>
             <Phone className="mx-auto mb-4" size={40} />
@@ -252,11 +252,11 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
           <img
             src='/consultorios/sala-lug.jpeg'
             alt="Consultorio"
-            className="rounded-[40px] shadow-2xl h-full object-cover"
+            className="rounded-[30px] shadow-2xl w-full h-[260px] md:h-[550px] object-cover"
           />
           <div>
             <p className="uppercase tracking-[4px] text-cyan-600 font-semibold mb-4">Nosotros</p>
-            <h3 className="text-5xl font-black mb-8 leading-tight">Experiencia y tecnología al servicio de tu sonrisa</h3>
+            <h3 className="text-3xl md:text-5xl font-black mb-8 leading-tight">Experiencia y tecnología al servicio de tu sonrisa</h3>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">Somos un equipo de profesionales especializados en odontología integral, estética dental y tratamientos avanzados.</p>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">Brindamos atención cálida, personalizada y moderna en un ambiente cómodo y profesional.</p>
             <a href="#contacto" className="inline-block bg-cyan-600 hover:bg-cyan-700 transition text-white px-8 py-4 rounded-2xl font-bold">Contactanos</a>
@@ -273,7 +273,7 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
         Especialidades
       </p>
 
-      <h3 className="text-5xl font-black">
+      <h3 className="text-3xl md:text-5xl font-black">
         Nuestros Tratamientos
       </h3>
     </div>
@@ -306,12 +306,12 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
         <img
           src={selected.image}
           alt={selected.title}
-          className="w-full h-[420px] object-cover"
+          className="w-full h-[220px] md:h-[420px] object-cover"
         />
 
-        <div className="p-8">
+        <div className="p-4 md:p-5">
 
-          <h4 className="text-4xl font-black mb-6">
+          <h4 className="text-2xl md:text-4xl font-black">
             {selected.title}
           </h4>
 
@@ -324,7 +324,7 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
           {selected.video && (
             <div className="rounded-[25px] overflow-hidden">
               <iframe
-                className="w-full h-[420px]"
+                className="w-full h-[220px] md:h-[420px]"
                 src={selected.video}
                 title={selected.title}
                 loading="lazy"
@@ -346,9 +346,9 @@ style={{ backgroundImage: "url('/imagenes/logo.jpeg')" }}
         <div className="max-w-7xl mx-auto text-center">
           <p className="uppercase tracking-[4px] text-cyan-600 font-semibold mb-4">Instalaciones</p>
           <h3 className="text-5xl font-black mb-16">Galería</h3>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {gallery.map((img, index) => (
-              <img key={index} src={img} alt="Galería" className="w-full h-[600px] object-cover rounded-[28px] scale-95 hover:scale-100 transition duration-300" />
+              <img key={index} src={img} alt="Galería" className="className=w-full h-[240px] md:h-[420px] object-cover rounded-[28px]" />
             ))}
           </div>
         </div>
