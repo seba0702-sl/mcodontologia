@@ -73,8 +73,9 @@ export default function MCodontoWebsite() {
     {
       title: 'Implantes Dentales',
       images: [
-        '/tratamientos/impl-1.jpeg',
-        '/tratamientos/impl-2.jpeg'
+        '/tratamientos/imp1.jpeg',
+        '/tratamientos/imp2.jpeg',
+        '/tratamientos/imp3.jpeg',
 
       ],
       description: 'Recuperá función y estética dental.'
@@ -83,8 +84,8 @@ export default function MCodontoWebsite() {
     {
       title: 'Blanqueamiento',
       images: [
-        '/tratamientos/blanq-ayd.jpeg',
-        '/tratamientos/blanq-lamp.jpeg'
+        '/tratamientos/blanq1.jpeg',
+        '/tratamientos/blanq2.jpeg'
       ],
        description: 'Dientes más blancos y una sonrisa renovada.'
     },
@@ -92,9 +93,9 @@ export default function MCodontoWebsite() {
     {
       title: 'Carillas',
       images: [
-        '/tratamientos/carillas1.jpeg',
-        '/tratamientos/carillas2.jpeg',
-        '/tratamientos/carillas3.jpeg'
+        '/tratamientos/cari1.jpeg',
+        '/tratamientos/cari2.jpeg',
+        '/tratamientos/cari3.jpeg'
       ],
       description: 'Carillas dentales para lograr una sonrisa estética y natural.'
     },
@@ -102,17 +103,18 @@ export default function MCodontoWebsite() {
     {
       title: 'Endodoncia',
       images: [
-        '/tratamientos/endo-1.jpeg',
-        '/tratamientos/endo-2.jpeg',
-        '/tratamientos/endo-3.jpeg'
+        '/tratamientos/end1.jpeg',
+        '/tratamientos/end2.jpeg',
+        '/tratamientos/end3.jpeg'
       ],
       description: 'Eliminamos el dolor y preservamos tu diente.'
     },
     {
       title: 'Cirugía general',
       images: [
-        '/tratamientos/ciru-1.jpeg',
-        '/tratamientos/ciru-2.jpeg'
+        '/tratamientos/cir1.jpeg',
+        '/tratamientos/cir2.jpeg',
+        '/tratamientos/cir3.jpeg'
 
       ],
       description: 'Tratamientos quirúrgicos con atención segura y personalizada.'
@@ -133,11 +135,11 @@ export default function MCodontoWebsite() {
     {
       title: 'Limpieza dental',
       images: [
-        '/tratamientos/limp-cepillo.png',
-        '/tratamientos/limp-cepillo2.jpeg',
-        '/tratamientos/limp-cepillo3.jpeg',
-        '/tratamientos/limp-gancho.jpeg',
-        '/tratamientos/limp-gancho2.jpeg'
+        '/tratamientos/limp1.jpeg',
+        '/tratamientos/limp2.jpeg',
+        '/tratamientos/limp3.jpeg',
+        '/tratamientos/limp4.jpeg'
+        
 
       ],
       description: 'Higiene dental profesional para una boca más saludable.'
@@ -145,39 +147,76 @@ export default function MCodontoWebsite() {
     {
       title: 'Odontopediatria',
       images: [
-        '/tratamientos/odontped1.jpeg',
+        '/tratamientos/odoped1.jpeg',
+        '/tratamientos/odoped2.jpeg',
+        '/tratamientos/odoped3.jpeg'
       ],
       description: 'Cuidado odontológico infantil para una sonrisa sana desde pequeños.'
     },
     {
       title: 'Placas miorelajantes',
       images: [
-        '/tratamientos/placasmio1.jpeg',
-        '/tratamientos/placasmio2.jpeg'
+        '/tratamientos/desc1.jpeg',
+        '/tratamientos/desc2.jpeg',
+        '/tratamientos/desc3.jpeg'
       ],
       description: 'Placas diseñadas para disminuir tensión y desgaste dental.'
     },
     {
       title: 'Prótesis fija',
       images: [
-        '/tratamientos/pro-fija1.jpeg',
-        '/tratamientos/pro-fija2.jpeg'
+        '/tratamientos/profija1.jpeg',
+        '/tratamientos/profija2.jpeg',
+        '/tratamientos/profija3.jpeg'
       ],
       description: 'Rehabilitación dental con resultados naturales y funcionales.'
     },
     {
-      title: 'Prótesis removibles',
+      title: 'Arañitas Flexible',
       images: [
-        '/tratamientos/prote-rem1.jpeg',
-        '/tratamientos/prote-rem2.jpeg'
+        '/tratamientos/araflex1.jpeg',
+        '/tratamientos/araflex2.jpeg'
+      ],
+      
+    },
+    {
+      title: 'Prótesis acrilica',
+      images: [
+        '/tratamientos/proacri1.jpeg',
+        '/tratamientos/proacri2.jpeg'
+      ],
+      
+    },
+    {
+      title: 'Prótesis Acrilica Completa',
+      images: [
+        '/tratamientos/proacricom1.jpeg',
+        '/tratamientos/proacricom2.jpeg'
+      ],
+      
+    },
+    {
+      title: 'Prótesis Cromo ',
+      images: [
+        '/tratamientos/procromo1.jpeg',
+        '/tratamientos/procromo2.jpeg'
+      ],
+      
+    },
+    {
+      title: 'Prótesis flexible',
+      images: [
+        '/tratamientos/proflex1.jpeg',
+        '/tratamientos/proflex2.jpeg'
       ],
       description: 'Soluciones removibles adaptadas a tus necesidades.'
     },
     {
       title: 'Restauración de caries',
       images: [
-        '/tratamientos/rest-caries1.jpeg',
-        '/tratamientos/rest-caries2.jpeg'
+        '/tratamientos/restcaries1.jpeg',
+        '/tratamientos/restcaries2.jpeg',
+        '/tratamientos/restcaries3.jpeg'
       ],
       description: 'Recuperamos la forma, función y estética de dientes afectados por caries.'
     },
@@ -199,7 +238,7 @@ export default function MCodontoWebsite() {
       <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div>
-            <h3 className="text-2xl font-bold text-cyan-700">MC Odontología</h3>
+            <h3 className="text-2xl font-bold text-cyan-700">Odontología MC</h3>
             <p className="text-xl font-bold text-black-600">Dr. Beker Mateo Barerra Gonzalez<br />ODONTOLOGO<br />M.P. 33543 - M.N. 39933</p>
             <p className="text-xs text-gray-500">Consultorio Odontológico</p>
           </div>
