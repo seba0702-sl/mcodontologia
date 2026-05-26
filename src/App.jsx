@@ -698,14 +698,38 @@ rounded-full
               <a href="https://wa.me/5491176668074" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300">📞 11 7666-8074</a>
             </div>
           </div>
-          <p>Seguinos en nuestras redes</p>
+          
           <div className="m<pt-10 text-center">
-            <a href="https://www.instagram.com/odontologiam_c" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-pink-400 hover:text-pink-300 font-semibold text-lg">
-              📷 "Instagram" @odontologiam_c
-            </a><br />
-            <a href="https://www.tiktok.com/@odontologiam_c?_r=1&_t=ZS-96XnZWeMx4X" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-pink-400 hover:text-pink-300 font-semibold text-lg">
-              📷"TikTok" @odontologiam_c
-            </a>
+            <h1>Seguinos en nuestras redes</h1>
+            <a
+  href="https://www.instagram.com/odontologiam_c"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-3 text-pink-400 hover:text-pink-300 font-semibold text-lg"
+>
+  <img
+    src="/iconos/instagram.png"
+    alt="Instagram"
+    className="w-6 h-6"
+  />
+  @odontologiam_c
+</a>
+
+<br />
+
+<a
+  href="https://www.tiktok.com/@odontologiam_c"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-3 text-white hover:text-gray-300 font-semibold text-lg"
+>
+  <img
+    src="/iconos/tiktok.png"
+    alt="TikTok"
+    className="w-6 h-6"
+  />
+  @odontologiam_c
+</a>
           </div>
           <div className="mt-10 text-center text-gray-500">
             © 2026 MC Odontología · Todos los derechos reservados
