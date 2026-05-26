@@ -698,8 +698,8 @@ rounded-full
               <a href="https://wa.me/5491176668074" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300">📞 11 7666-8074</a>
             </div>
           </div>
-
-          <div className="mt-10 text-center">
+          <p>Seguinos en nuestras redes</p>
+          <div className="m<pt-10 text-center">
             <a href="https://www.instagram.com/odontologiam_c" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-pink-400 hover:text-pink-300 font-semibold text-lg">
               📷 "Instagram" @odontologiam_c
             </a><br />
