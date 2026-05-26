@@ -41,6 +41,7 @@ export default function MCodontoWebsite() {
       whatsapp: 'https://wa.me/5491176668074',
       mapa: 'https://maps.google.com/?q=Av+de+Mayo+1262+Ramos+Mejia',
       fotos: [
+        '/imagenes/proximamente.png',
         '/consultorios/frente-rm.jpeg',
         '/consultorios/recepcion-rm.jpeg',
         '/consultorios/sala-rm.jpeg'
@@ -232,8 +233,11 @@ export default function MCodontoWebsite() {
     '/consultorios/recepcion-lug.jpeg',
   ]
 
-  return (
-    <div className="bg-white text-gray-800 font-sans scroll-smooth">
+ return (
+  <>
+    <div className="logo-fondo"></div>
+
+    <div className="bg-white/95 text-gray-800 font-sans scroll-smooth">
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -707,7 +711,8 @@ rounded-full
             © 2026 MC Odontología · Todos los derechos reservados
           </div>
         </div>
-      </footer>
+            </footer>
     </div>
-  )
+  </>
+)
 }
