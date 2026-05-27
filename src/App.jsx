@@ -895,7 +895,7 @@ mb-4
               <div>
                 <h4 className="text-white font-bold mb-3">📍 Ramos Mejía</h4>
                 <p>Av. de Mayo 1262</p>
-                <a href="https://wa.me/5491176768074" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300">📞 11 7666-8074</a>
+                <a href="https://wa.me/5491176768074" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300">📞 11 7676-8074</a>
               </div>
             </div>
 
