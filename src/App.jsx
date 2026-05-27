@@ -107,7 +107,7 @@ export default function MCodontoWebsite() {
       nombre: 'Odontología MC',
       direccion: 'Av. de Mayo 1262',
       localidad: 'Ramos Mejía · Buenos Aires',
-      whatsapp: 'https://wa.me/5491176668074',
+      whatsapp: 'https://wa.me/5491176768074',
       mapa: 'https://maps.google.com/?q=Av+de+Mayo+1262+Ramos+Mejia',
       fotos: [
         '/imagenes/proximamente.png',
@@ -333,7 +333,7 @@ export default function MCodontoWebsite() {
               <div className="absolute right-0 top-full mt-2 w-64 bg-white rounded-2xl shadow-2xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <a href="https://wa.me/5491154833390" target="_blank" rel="noopener noreferrer" className="block px-5 py-4 hover:bg-gray-100">📍 Lugano</a>
                 <a href="https://wa.me/5491138757361" target="_blank" rel="noopener noreferrer" className="block px-5 py-4 hover:bg-gray-100">📍 Tapiales</a>
-                <a href="https://wa.me/5491176668074" target="_blank" rel="noopener noreferrer" className="block px-5 py-4 hover:bg-gray-100">📍 Ramos Mejía</a>
+                <a href="https://wa.me/5491176768074" target="_blank" rel="noopener noreferrer" className="block px-5 py-4 hover:bg-gray-100">📍 Ramos Mejía</a>
               </div>
             </div>
 
