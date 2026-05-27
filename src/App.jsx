@@ -932,7 +932,7 @@ mb-4
               </a>
             </div>
             <div className="mt-10 text-center text-gray-500">
-              © 2026 MC Odontología · Todos los derechos reservados
+              © 2026 Odontología MC· Todos los derechos reservados
             </div>
           </div>
         </footer>
